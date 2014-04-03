@@ -61,11 +61,11 @@ public class HibernateUtility {
 //                    .setProperty("hibernate.connection.username", "postgres")
 //                    .setProperty("hibernate.connection.password", "postgres")
                     /***MYSQL***/
-                    .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLInnoDBDialect")
+                    .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
                     .setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver")
-                    .setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/combosaninhados")
-                    .setProperty("hibernate.connection.username", "root")
-                    .setProperty("hibernate.connection.password", "root")
+                    .setProperty("hibernate.connection.url", "jdbc:mysql://localhost/combosaninhados")
+                    .setProperty("hibernate.connection.username", "admin")
+                    .setProperty("hibernate.connection.password", "admin")
                     .setProperty("hibernate.hbm2ddl.auto", "update")
                     .setProperty("hibernate.c3p0.max_size", "10")
                     .setProperty("hibernate.c3p0.min_size", "2")
@@ -92,3 +92,18 @@ public class HibernateUtility {
     }
     
 }
+
+/*
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/JSFCrudDB" />
+            <property name="javax.persistence.jdbc.user" value="admin" />
+            <property name="javax.persistence.jdbc.password" value="admin" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.connection.shutdown" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false"/>
+        </properties>
+
+*/

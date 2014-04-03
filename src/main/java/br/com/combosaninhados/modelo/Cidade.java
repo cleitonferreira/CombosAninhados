@@ -21,11 +21,30 @@ public class Cidade implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCidade;
-    private String nome;
+    private Long CID_ID;
+    private String CID_NOME;
     @ManyToOne
-    @JoinColumn(name = "idEstado")
+    @JoinColumn(name = "EST_ID")
     private Estado estado;
+
+    public Cidade() {
+    }
+
+    public Long getCID_ID() {
+        return CID_ID;
+    }
+
+    public void setCID_ID(Long CID_ID) {
+        this.CID_ID = CID_ID;
+    }
+
+    public String getCID_NOME() {
+        return CID_NOME;
+    }
+
+    public void setCID_NOME(String CID_NOME) {
+        this.CID_NOME = CID_NOME;
+    }
 
     public Estado getEstado() {
         return estado;
@@ -35,20 +54,11 @@ public class Cidade implements Serializable {
         this.estado = estado;
     }
 
-    public Long getIdCidade() {
-        return idCidade;
-    }
-
-    public void setIdCidade(Long idCidade) {
-        this.idCidade = idCidade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 43 * hash + (this.CID_ID != null ? this.CID_ID.hashCode() : 0);
+        return hash;
     }
 
     @Override
@@ -60,18 +70,15 @@ public class Cidade implements Serializable {
             return false;
         }
         final Cidade other = (Cidade) obj;
-        if (this.idCidade != other.idCidade && (this.idCidade == null || !this.idCidade.equals(other.idCidade))) {
+        if (this.CID_ID != other.CID_ID && (this.CID_ID == null || !this.CID_ID.equals(other.CID_ID))) {
             return false;
         }
         return true;
     }
+    
+    
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + (this.idCidade != null ? this.idCidade.hashCode() : 0);
-        return hash;
-    }
+  
     
     
 }

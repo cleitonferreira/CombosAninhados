@@ -13,11 +13,16 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <netbeans.hint.j2eeVersion>1.6</netbeans.hint.j2eeVersion>
     </properties>
     
     <repositories>
+        <repository>  
+            <id>prime-repo</id>  
+            <name>PrimeFaces Maven Repository</name>  
+            <url>http://repository.primefaces.org</url>  
+            <layout>default</layout>  
+        </repository> 
         <repository>
             <id>java.net2</id>
             <name>Repository hosting the jee6 artifacts</name>
@@ -28,15 +33,80 @@
             <name>JBoss Repository</name>
             <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
         </repository>
-        <repository>
-            <id>prime-repo</id>
-            <name>Prime Technology Maven Repository</name>
-            <url>http://repository.prime.com.tr</url>
-            <layout>default</layout>
-        </repository>
+
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces.themes</groupId>
+            <artifactId>aristo</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <artifactId>antlr</artifactId>
+            <groupId>antlr</groupId>
+            <type>jar</type>
+            <version>2.7.6</version>
+        </dependency>
+        <dependency>
+            <artifactId>asm</artifactId>
+            <groupId>asm</groupId>
+            <type>jar</type>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <artifactId>cglib</artifactId>
+            <groupId>cglib</groupId>
+            <type>jar</type>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <artifactId>commons-collections</artifactId>
+            <groupId>commons-collections</groupId>
+            <type>jar</type>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <artifactId>dom4j</artifactId>
+            <groupId>dom4j</groupId>
+            <type>jar</type>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <groupId>org.hibernate</groupId>
+            <type>jar</type>
+            <version>3.2.0.Final</version>
+        </dependency>
+        <dependency>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <type>jar</type>
+            <version>1.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <artifactId>javassist</artifactId>
+            <groupId>javassist</groupId>
+            <type>jar</type>
+            <version>3.12.0.GA</version>
+        </dependency>
+        <dependency>
+            <artifactId>jta</artifactId>
+            <groupId>javax.transaction</groupId>
+            <type>jar</type>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <artifactId>xml-apis</artifactId>
+            <groupId>xml-apis</groupId>
+            <type>jar</type>
+            <version>1.0.b2</version>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
@@ -82,16 +152,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.16</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>2.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces.themes</groupId>
-            <artifactId>aristo</artifactId>
-            <version>1.0.0</version>
         </dependency>
 
         <dependency>

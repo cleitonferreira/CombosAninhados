@@ -32,7 +32,7 @@ public class ConverterEstado implements Converter {
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         if (value instanceof Estado) {
             Estado estado = (Estado) value;
-            return String.valueOf(estado.getIdEstado());
+            return String.valueOf(estado.getEST_ID());
         }
         return "";
     }

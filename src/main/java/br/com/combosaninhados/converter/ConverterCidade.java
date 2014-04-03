@@ -35,7 +35,7 @@ public class ConverterCidade implements Converter {
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         if (value instanceof Cidade) {
             Cidade municipio = (Cidade) value;
-            return String.valueOf(municipio.getIdCidade());
+            return String.valueOf(municipio.getCID_ID());
         }
         return "";
     }

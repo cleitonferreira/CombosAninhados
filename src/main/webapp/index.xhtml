@@ -19,7 +19,7 @@ and open the template in the editor.
                     <h:outputLabel value="Estado: *" />
                     <h:selectOneMenu id="estado" value="#{meuBean.estado}" required="true" requiredMessage="Campo obrigatório" converter="converterEstado" style="width: 250px;" >
                         <f:selectItem itemLabel="Selecione" />
-                        <f:selectItems value="#{meuBean.estados}" var="e" itemValue="#{e}" itemLabel="#{e.nome}" />
+                        <f:selectItems value="#{meuBean.estados}" var="e" itemValue="#{e}" itemLabel="#{e.EST_NOME}" />
                         <f:ajax render="cidade" event="change" listener="#{meuBean.listaCidades}" />
                     </h:selectOneMenu>
                     <p:message for="estado" />
@@ -27,7 +27,7 @@ and open the template in the editor.
                     <h:outputLabel value="Cidade: *" />
                     <h:selectOneMenu id="cidade" value="#{meuBean.cidade}" required="true" requiredMessage="Campo obrigatório" converter="converterCidade" style="width: 250px;" >
                         <f:selectItem itemLabel="Selecione" />
-                        <f:selectItems value="#{meuBean.cidades}" var="c" itemValue="#{c}" itemLabel="#{c.nome}" />
+                        <f:selectItems value="#{meuBean.cidades}" var="c" itemValue="#{c}" itemLabel="#{c.CID_NOME}" />
                     </h:selectOneMenu>
                     <p:message for="cidade" />
                 </h:panelGrid>
@@ -36,9 +36,10 @@ and open the template in the editor.
                 <p:fieldset id="fieldset" legend="Selecionados" >
                     <h:panelGrid columns="2" >
                         <h:outputLabel value="Estado: " />
-                        <h:outputText value="#{meuBean.cidade.estado.nome}" />
+                        <h:outputText value="#{meuBean.cidade.estado.EST_NOME} / #{meuBean.cidade.estado.EST_ID}" />
                         <h:outputLabel value="Cidade: " />
-                        <h:outputText value="#{meuBean.cidade.nome}" />
+                        <h:outputText value="#{meuBean.cidade.CID_NOME} / #{meuBean.cidade.CID_ID}" />
+                        <h:outputText value="" />
                     </h:panelGrid>
                 </p:fieldset>
             </p:panel>

@@ -19,32 +19,42 @@ public class Estado implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idEstado;
-    private String nome;
-    private String sigla;
+    private Long EST_ID;
+    private String EST_NOME;
+    private String EST_UF;
 
-    public Long getIdEstado() {
-        return idEstado;
+    public Estado() {
     }
 
-    public void setIdEstado(Long idEstado) {
-        this.idEstado = idEstado;
+    public Long getEST_ID() {
+        return EST_ID;
     }
 
-    public String getNome() {
-        return nome;
+    public void setEST_ID(Long EST_ID) {
+        this.EST_ID = EST_ID;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getEST_NOME() {
+        return EST_NOME;
     }
 
-    public String getSigla() {
-        return sigla;
+    public void setEST_NOME(String EST_NOME) {
+        this.EST_NOME = EST_NOME;
     }
 
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
+    public String getEST_UF() {
+        return EST_UF;
+    }
+
+    public void setEST_UF(String EST_UF) {
+        this.EST_UF = EST_UF;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + (this.EST_ID != null ? this.EST_ID.hashCode() : 0);
+        return hash;
     }
 
     @Override
@@ -56,18 +66,13 @@ public class Estado implements Serializable {
             return false;
         }
         final Estado other = (Estado) obj;
-        if (this.idEstado != other.idEstado && (this.idEstado == null || !this.idEstado.equals(other.idEstado))) {
+        if (this.EST_ID != other.EST_ID && (this.EST_ID == null || !this.EST_ID.equals(other.EST_ID))) {
             return false;
         }
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 41 * hash + (this.idEstado != null ? this.idEstado.hashCode() : 0);
-        return hash;
-    }
+
     
 
 }
