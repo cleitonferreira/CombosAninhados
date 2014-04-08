@@ -92,18 +92,3 @@ public class HibernateUtility {
     }
     
 }
-
-/*
-        <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/JSFCrudDB" />
-            <property name="javax.persistence.jdbc.user" value="admin" />
-            <property name="javax.persistence.jdbc.password" value="admin" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
-            <property name="hibernate.connection.shutdown" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.show_sql" value="false" />
-            <property name="hibernate.format_sql" value="false"/>
-        </properties>
-
-*/
